@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Selimcan Gürsu - Junior Full Stack Web Developer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Airpods Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-unit">
+          <div class="card-left">
+            <img src="./product.png" alt="">
+          </div>
+          <div class="card-right">
+            <span class="product-name">AirPods</span>
+            <span class="product-title">Kablosuz . Zahmetsiz . Sihirli.</span>
+            <span class="product-description">AirPods ile eşi benzeri olmayan bir kablosuz kulaklık deneyimine hazır olun. Kutusundan çıkarır çıkarmaz istediğiniz aygıtla kullanmaya başlayın. Kulağınıza takıp anında bağlanarak yüksek kaliteli ve zengin bir ses deneyimi yaşayın. Sanki sihirli, değil mi?</span>
+            <button class="product-button">İncele</button>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>AirPods satın alın, 6 aylık ücretsiz Apple Music aboneliğinden yararlanın.</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      console.log('Selimcan Gürsu - Junior Full Stack Web Developer');
+      let title = $('.product-title');
+      let i = 0;
+      let titleList = ['Kusursuz, Sorunsuz.', 'Siri. Sağ Kolunuz.', 'Gücüne Kulak Verin.', 'Zahmetsiz Kurulum', 'Kesintisiz Müzik.'];
+      setInterval(function() {
+        if (i == titleList.length) {
+          i = 0;
+        }
+        title.text(titleList[i]);
+        i++;
+      }, 2000);
+    })
+  </script>
+</html>
